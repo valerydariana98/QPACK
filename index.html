@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>QPACK Simulador</title>
+
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+
+</head>
+<body>
+
+<h1>Simulador QPACK</h1>
+
+<h2>Codificar</h2>
+
+<input id="inputHeader">
+
+<button onclick="encode()">Codificar</button>
+<button onclick="resetAll()">Reset</button>
+
+<h3>Ejemplos</h3>
+<button onclick="exampleStatic()">Static</button>
+<button onclick="exampleDynamic()">Dynamic</button>
+<button onclick="exampleLiteral()">Literal</button>
+
+<h3>Headers comprimidos</h3>
+<ul id="sent"></ul>
+
+<h3>Tabla dinámica</h3>
+<ul id="table"></ul>
+
+<h3>Stats</h3>
+<p id="stats"></p>
+
+<hr>
+
+<h2>Decodificar</h2>
+
+<button onclick="runDecode()">Decodificar</button>
+<button onclick="resetDecode()">Reset</button>
+
+<h3>Ejemplos</h3>
+<button onclick="prepareDecodeStatic()">Static</button>
+<button onclick="prepareDecodeDynamic()">Dynamic</button>
+
+<h3>Entrada comprimida</h3>
+<ul id="decodeInput"></ul>
+
+<h3>Resultado</h3>
+<table>
+<thead>
+<tr><th>Nombre</th><th>Valor</th></tr>
+</thead>
+<tbody id="decodeOutput"></tbody>
+</table>
+
+</body>
+</html>
